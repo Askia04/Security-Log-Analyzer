@@ -38,11 +38,6 @@ def parse_log_file(filepath):
    
    
 if __name__ == "__main__":
-    with open("sample_logs/auth.log", "r") as f:
-        lines = f.readlines()
-    print(f"Read {len(lines)} lines from file")
-    
     events = parse_log_file("sample_logs/auth.log")
-    print(f"Found {len(events)} events")
     for e in events:
         print(e)
