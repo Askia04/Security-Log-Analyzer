@@ -45,8 +45,3 @@ pytest
 
 ## Tech stack
 Python, regex, pytest, argparse
-
-## Possible future improvements
-- GeoIP lookup to show attacker locations
-- Detection of slow, "low-and-slow" brute-force attempts spread over hours/days
-- Live log-tailing mode for real-time alerting
