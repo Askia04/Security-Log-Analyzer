@@ -1,0 +1,42 @@
+
+    <html>
+    <head>
+        <title>Security Log Analysis Report</title>
+        <style>
+            body { font-family: Arial, sans-serif; margin: 40px; }
+            table { border-collapse: collapse; width: 100%; }
+            th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+            th { background-color: #333; color: white; }
+            .high { color: darkorange; }
+            .critical { color: red; font-weight: bold; }
+        </style>
+    </head>
+    <body>
+        <h1>Security Log Analysis Report</h1>
+        <p>Total findings: 2</p>
+        <table>
+            <tr>
+                <th>Type</th>
+                <th>IP Address</th>
+                <th>Severity</th>
+                <th>Detail</th>
+            </tr>
+            
+        <tr>
+            <td>brute_force</td>
+            <td>185.220.101.5</td>
+            <td>high</td>
+            <td>9 failed login attempts from 185.220.101.5</td>
+        </tr>
+        
+        <tr>
+            <td>breach_after_brute_force</td>
+            <td>185.220.101.5</td>
+            <td>critical</td>
+            <td>Login succeeded as 'root' from 185.220.101.5 after 9 failed attempts</td>
+        </tr>
+        
+        </table>
+    </body>
+    </html>
+    
