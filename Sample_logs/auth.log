@@ -1,0 +1,19 @@
+Mar 15 08:01:12 webserver sshd[10001]: Accepted password for alice from 192.168.1.50 port 51234 ssh2
+Mar 15 08:15:44 webserver sshd[10002]: Accepted password for bob from 192.168.1.51 port 51290 ssh2
+Mar 15 09:22:03 webserver sshd[10003]: Accepted password for alice from 192.168.1.50 port 52011 ssh2
+Mar 15 02:14:01 webserver sshd[12340]: Failed password for root from 185.220.101.5 port 51100 ssh2
+Mar 15 02:14:03 webserver sshd[12341]: Failed password for root from 185.220.101.5 port 51101 ssh2
+Mar 15 02:14:05 webserver sshd[12342]: Failed password for root from 185.220.101.5 port 51102 ssh2
+Mar 15 02:14:07 webserver sshd[12343]: Failed password for admin from 185.220.101.5 port 51103 ssh2
+Mar 15 02:14:09 webserver sshd[12344]: Failed password for admin from 185.220.101.5 port 51104 ssh2
+Mar 15 02:14:11 webserver sshd[12345]: Failed password for root from 185.220.101.5 port 51105 ssh2
+Mar 15 02:14:13 webserver sshd[12346]: Failed password for root from 185.220.101.5 port 51106 ssh2
+Mar 15 02:14:15 webserver sshd[12347]: Failed password for root from 185.220.101.5 port 51107 ssh2
+Mar 15 02:14:17 webserver sshd[12348]: Failed password for root from 185.220.101.5 port 51108 ssh2
+Mar 15 02:14:19 webserver sshd[12349]: Accepted password for root from 185.220.101.5 port 51109 ssh2
+Mar 15 11:05:30 webserver sshd[10004]: Accepted password for bob from 192.168.1.51 port 53012 ssh2
+Mar 15 03:47:22 webserver sshd[12360]: Failed password for admin from 91.203.5.12 port 44001 ssh2
+Mar 15 03:47:24 webserver sshd[12361]: Failed password for admin from 91.203.5.12 port 44002 ssh2
+Mar 15 14:33:10 webserver sshd[10005]: Accepted password for alice from 192.168.1.50 port 54221 ssh2
+Mar 15 14:40:00 webserver sudo[10006]: alice : TTY=pts/0 ; PWD=/home/alice ; USER=root ; COMMAND=/bin/systemctl restart nginx
+Mar 15 16:12:45 webserver sshd[10007]: Accepted password for carol from 192.168.1.52 port 55110 ssh2
