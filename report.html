@@ -13,7 +13,7 @@
     </head>
     <body>
         <h1>Security Log Analysis Report</h1>
-        <p>Total findings: 3</p>
+        <p>Total findings: 43</p>
         <table>
             <tr>
                 <th>Type</th>
@@ -33,7 +33,14 @@
             <td>brute_force</td>
             <td>91.203.5.12</td>
             <td>high</td>
-            <td>2 failed login attempts from 91.203.5.12</td>
+            <td>7 failed login attempts from 91.203.5.12</td>
+        </tr>
+        
+        <tr>
+            <td>brute_force</td>
+            <td>203.0.113.44</td>
+            <td>high</td>
+            <td>7 failed login attempts from 203.0.113.44</td>
         </tr>
         
         <tr>
@@ -41,6 +48,279 @@
             <td>185.220.101.5</td>
             <td>critical</td>
             <td>Login succeeded as 'root' from 185.220.101.5 after 9 failed attempts</td>
+        </tr>
+        
+        <tr>
+            <td>off_hours_login</td>
+            <td>192.168.1.50</td>
+            <td>medium</td>
+            <td>Login as 'alice' from 192.168.1.50 at 0:00 (outside normal hours)</td>
+        </tr>
+        
+        <tr>
+            <td>off_hours_login</td>
+            <td>192.168.1.50</td>
+            <td>medium</td>
+            <td>Login as 'alice' from 192.168.1.50 at 0:00 (outside normal hours)</td>
+        </tr>
+        
+        <tr>
+            <td>off_hours_login</td>
+            <td>192.168.1.51</td>
+            <td>medium</td>
+            <td>Login as 'alice' from 192.168.1.51 at 1:00 (outside normal hours)</td>
+        </tr>
+        
+        <tr>
+            <td>off_hours_login</td>
+            <td>192.168.1.53</td>
+            <td>medium</td>
+            <td>Login as 'bob' from 192.168.1.53 at 1:00 (outside normal hours)</td>
+        </tr>
+        
+        <tr>
+            <td>off_hours_login</td>
+            <td>192.168.1.51</td>
+            <td>medium</td>
+            <td>Login as 'alice' from 192.168.1.51 at 1:00 (outside normal hours)</td>
+        </tr>
+        
+        <tr>
+            <td>off_hours_login</td>
+            <td>192.168.1.52</td>
+            <td>medium</td>
+            <td>Login as 'bob' from 192.168.1.52 at 1:00 (outside normal hours)</td>
+        </tr>
+        
+        <tr>
+            <td>off_hours_login</td>
+            <td>185.220.101.5</td>
+            <td>medium</td>
+            <td>Login as 'root' from 185.220.101.5 at 2:00 (outside normal hours)</td>
+        </tr>
+        
+        <tr>
+            <td>off_hours_login</td>
+            <td>192.168.1.52</td>
+            <td>medium</td>
+            <td>Login as 'carol' from 192.168.1.52 at 2:00 (outside normal hours)</td>
+        </tr>
+        
+        <tr>
+            <td>off_hours_login</td>
+            <td>192.168.1.53</td>
+            <td>medium</td>
+            <td>Login as 'alice' from 192.168.1.53 at 2:00 (outside normal hours)</td>
+        </tr>
+        
+        <tr>
+            <td>off_hours_login</td>
+            <td>192.168.1.52</td>
+            <td>medium</td>
+            <td>Login as 'carol' from 192.168.1.52 at 3:00 (outside normal hours)</td>
+        </tr>
+        
+        <tr>
+            <td>off_hours_login</td>
+            <td>192.168.1.51</td>
+            <td>medium</td>
+            <td>Login as 'carol' from 192.168.1.51 at 3:00 (outside normal hours)</td>
+        </tr>
+        
+        <tr>
+            <td>off_hours_login</td>
+            <td>192.168.1.51</td>
+            <td>medium</td>
+            <td>Login as 'alice' from 192.168.1.51 at 4:00 (outside normal hours)</td>
+        </tr>
+        
+        <tr>
+            <td>off_hours_login</td>
+            <td>192.168.1.51</td>
+            <td>medium</td>
+            <td>Login as 'carol' from 192.168.1.51 at 4:00 (outside normal hours)</td>
+        </tr>
+        
+        <tr>
+            <td>off_hours_login</td>
+            <td>192.168.1.51</td>
+            <td>medium</td>
+            <td>Login as 'carol' from 192.168.1.51 at 0:00 (outside normal hours)</td>
+        </tr>
+        
+        <tr>
+            <td>off_hours_login</td>
+            <td>192.168.1.52</td>
+            <td>medium</td>
+            <td>Login as 'alice' from 192.168.1.52 at 0:00 (outside normal hours)</td>
+        </tr>
+        
+        <tr>
+            <td>off_hours_login</td>
+            <td>192.168.1.50</td>
+            <td>medium</td>
+            <td>Login as 'carol' from 192.168.1.50 at 0:00 (outside normal hours)</td>
+        </tr>
+        
+        <tr>
+            <td>off_hours_login</td>
+            <td>192.168.1.52</td>
+            <td>medium</td>
+            <td>Login as 'carol' from 192.168.1.52 at 0:00 (outside normal hours)</td>
+        </tr>
+        
+        <tr>
+            <td>off_hours_login</td>
+            <td>192.168.1.52</td>
+            <td>medium</td>
+            <td>Login as 'bob' from 192.168.1.52 at 1:00 (outside normal hours)</td>
+        </tr>
+        
+        <tr>
+            <td>off_hours_login</td>
+            <td>192.168.1.53</td>
+            <td>medium</td>
+            <td>Login as 'alice' from 192.168.1.53 at 1:00 (outside normal hours)</td>
+        </tr>
+        
+        <tr>
+            <td>off_hours_login</td>
+            <td>192.168.1.51</td>
+            <td>medium</td>
+            <td>Login as 'carol' from 192.168.1.51 at 1:00 (outside normal hours)</td>
+        </tr>
+        
+        <tr>
+            <td>off_hours_login</td>
+            <td>192.168.1.50</td>
+            <td>medium</td>
+            <td>Login as 'alice' from 192.168.1.50 at 2:00 (outside normal hours)</td>
+        </tr>
+        
+        <tr>
+            <td>off_hours_login</td>
+            <td>192.168.1.52</td>
+            <td>medium</td>
+            <td>Login as 'alice' from 192.168.1.52 at 2:00 (outside normal hours)</td>
+        </tr>
+        
+        <tr>
+            <td>off_hours_login</td>
+            <td>192.168.1.50</td>
+            <td>medium</td>
+            <td>Login as 'bob' from 192.168.1.50 at 3:00 (outside normal hours)</td>
+        </tr>
+        
+        <tr>
+            <td>off_hours_login</td>
+            <td>192.168.1.51</td>
+            <td>medium</td>
+            <td>Login as 'carol' from 192.168.1.51 at 3:00 (outside normal hours)</td>
+        </tr>
+        
+        <tr>
+            <td>off_hours_login</td>
+            <td>192.168.1.51</td>
+            <td>medium</td>
+            <td>Login as 'dave' from 192.168.1.51 at 3:00 (outside normal hours)</td>
+        </tr>
+        
+        <tr>
+            <td>off_hours_login</td>
+            <td>192.168.1.50</td>
+            <td>medium</td>
+            <td>Login as 'dave' from 192.168.1.50 at 3:00 (outside normal hours)</td>
+        </tr>
+        
+        <tr>
+            <td>off_hours_login</td>
+            <td>192.168.1.51</td>
+            <td>medium</td>
+            <td>Login as 'dave' from 192.168.1.51 at 4:00 (outside normal hours)</td>
+        </tr>
+        
+        <tr>
+            <td>off_hours_login</td>
+            <td>192.168.1.50</td>
+            <td>medium</td>
+            <td>Login as 'dave' from 192.168.1.50 at 4:00 (outside normal hours)</td>
+        </tr>
+        
+        <tr>
+            <td>off_hours_login</td>
+            <td>192.168.1.53</td>
+            <td>medium</td>
+            <td>Login as 'alice' from 192.168.1.53 at 0:00 (outside normal hours)</td>
+        </tr>
+        
+        <tr>
+            <td>off_hours_login</td>
+            <td>192.168.1.51</td>
+            <td>medium</td>
+            <td>Login as 'dave' from 192.168.1.51 at 1:00 (outside normal hours)</td>
+        </tr>
+        
+        <tr>
+            <td>off_hours_login</td>
+            <td>192.168.1.53</td>
+            <td>medium</td>
+            <td>Login as 'carol' from 192.168.1.53 at 1:00 (outside normal hours)</td>
+        </tr>
+        
+        <tr>
+            <td>off_hours_login</td>
+            <td>192.168.1.52</td>
+            <td>medium</td>
+            <td>Login as 'carol' from 192.168.1.52 at 2:00 (outside normal hours)</td>
+        </tr>
+        
+        <tr>
+            <td>off_hours_login</td>
+            <td>192.168.1.53</td>
+            <td>medium</td>
+            <td>Login as 'carol' from 192.168.1.53 at 2:00 (outside normal hours)</td>
+        </tr>
+        
+        <tr>
+            <td>off_hours_login</td>
+            <td>192.168.1.52</td>
+            <td>medium</td>
+            <td>Login as 'dave' from 192.168.1.52 at 3:00 (outside normal hours)</td>
+        </tr>
+        
+        <tr>
+            <td>off_hours_login</td>
+            <td>192.168.1.53</td>
+            <td>medium</td>
+            <td>Login as 'bob' from 192.168.1.53 at 3:00 (outside normal hours)</td>
+        </tr>
+        
+        <tr>
+            <td>off_hours_login</td>
+            <td>192.168.1.52</td>
+            <td>medium</td>
+            <td>Login as 'carol' from 192.168.1.52 at 4:00 (outside normal hours)</td>
+        </tr>
+        
+        <tr>
+            <td>off_hours_login</td>
+            <td>192.168.1.51</td>
+            <td>medium</td>
+            <td>Login as 'alice' from 192.168.1.51 at 4:00 (outside normal hours)</td>
+        </tr>
+        
+        <tr>
+            <td>username_enumeration</td>
+            <td>203.0.113.44</td>
+            <td>high</td>
+            <td>203.0.113.44 attempted 7 different usernames: admin, guest, oracle, postgres, root, test, ubuntu</td>
+        </tr>
+        
+        <tr>
+            <td>sudo_spike</td>
+            <td>alice</td>
+            <td>medium</td>
+            <td>User 'alice' issued 6 sudo commands</td>
         </tr>
         
         </table>

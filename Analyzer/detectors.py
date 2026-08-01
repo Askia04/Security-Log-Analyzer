@@ -34,6 +34,8 @@ def detect_breach_after_brute_force(events, failure_threshold=5):
     findings = []
 
     for event in events:
+        if event["event_type"] not in ("failed_login", "successful_login"):
+            continue
         ip = event["ip"]
 
         if event["event_type"] == "failed_login":
@@ -65,3 +67,60 @@ if __name__ == "__main__":
     print("\n=== Breach After Brute Force Findings ===")
     for finding in detect_breach_after_brute_force(events):
         print(finding)
+
+
+from datetime import datetime
+
+def detect_off_hours_login(events, start_hour=0, end_hour=5):
+    """Flags successful logins that happen during unusual hours (default: midnight-5am)."""
+    findings = []
+    for event in events:
+        if event["event_type"] == "successful_login" and "hour" in event:
+            if start_hour <= event["hour"] < end_hour:
+                findings.append({
+                    "type": "off_hours_login",
+                    "ip": event["ip"],
+                    "user": event["user"],
+                    "severity": "medium",
+                    "detail": f"Login as '{event['user']}' from {event['ip']} at {event['hour']}:00 (outside normal hours)",
+                })
+    return findings
+
+
+def detect_username_enumeration(events, unique_user_threshold=4):
+    """Flags an IP that tried logging in as many DIFFERENT usernames — 
+    suggests the attacker is guessing valid accounts, not just one password."""
+    users_by_ip = defaultdict(set)
+
+    for event in events:
+        if event["event_type"] == "failed_login":
+            users_by_ip[event["ip"]].add(event["user"])
+
+    findings = []
+    for ip, users in users_by_ip.items():
+        if len(users) >= unique_user_threshold:
+            findings.append({
+                "type": "username_enumeration",
+                "ip": ip,
+                "severity": "high",
+                "detail": f"{ip} attempted {len(users)} different usernames: {', '.join(sorted(users))}",
+            })
+    return findings
+
+
+def detect_sudo_spike(sudo_events, count_threshold=5):
+    """Flags a user issuing an unusually high number of sudo commands."""
+    sudo_by_user = defaultdict(int)
+    for event in sudo_events:
+        sudo_by_user[event["user"]] += 1
+
+    findings = []
+    for user, count in sudo_by_user.items():
+        if count >= count_threshold:
+            findings.append({
+                "type": "sudo_spike",
+                "user": user,
+                "severity": "medium",
+                "detail": f"User '{user}' issued {count} sudo commands",
+            })
+    return findings

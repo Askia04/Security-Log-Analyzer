@@ -3,10 +3,11 @@ def generate_html_report(findings, output_path="report.html"):
     
     rows = ""
     for finding in findings:
+        identifier = finding.get("ip", finding.get("user", "N/A"))
         rows += f"""
         <tr>
             <td>{finding['type']}</td>
-            <td>{finding['ip']}</td>
+            <td>{identifier}</td>
             <td>{finding['severity']}</td>
             <td>{finding['detail']}</td>
         </tr>
